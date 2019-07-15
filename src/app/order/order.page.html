@@ -53,16 +53,16 @@
 
       <ion-item >
           <ion-label position="floating">Coffee Price</ion-label>
-          <ion-input  [(ngModel)] ="coffeeList.price" > </ion-input>
+          <ion-input  [(ngModel)] ="coffeeList.price"  disabled> </ion-input>
 
           <ion-label position="floating">Total Price =(Price * Quantuty)</ion-label>
-          <ion-input  [(ngModel)] ="coffeeList.ItemPrice" > </ion-input>
+          <ion-input  [(ngModel)] ="coffeeList.ItemPrice" disabled> </ion-input>
       
 
 
       
           <ion-label position="floating">Quantity </ion-label>
-          <ion-input  [(ngModel)] ="coffeeList.quantity" (change)="countPrice(coffeeList)"> </ion-input>
+          <ion-input  [(ngModel)] ="coffeeList.quantity" (change)="countPrice(coffeeList)" disabled> </ion-input>
 
           <ion-button fill="outline" slot="end" (click)="quantity_dec(coffeeList)">-</ion-button>
           <ion-button fill="outline" slot="end" (click)="quantity_inc(coffeeList)">+</ion-button>
