@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+        <ion-button fill="outline"  slot="end" [routerLink]="['/home/']">Home</ion-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <table mdbTable >
+        <thead>
+          <tr>
+              <th  scope="col"> Coffee ID</th>
+  
+            <th  scope="col"> Coffee Name</th>
+            <th  scope="col"> Coffee Milk</th>
+            <th  scope="col"> Coffee Suger</th>
+            <th  scope="col"> Coffee Price</th>
+            <th  scope="col"> Coffee Quantity</th>
+            <th  scope="col"> Total Price</th>
+  
+  
+  
+            
+          </tr>
+        </thead>
+        <tbody>
+     
+     <!--tr mdbTableCol *ngIf = "id"   *ngFor = "let lis of ListOrder-->
+     <tr mdbTableCol *ngFor = "let lis of ListOrder">
+            <td> {{lis.id}} </td>
+            <td> {{lis.coffeeName}} </td>
+            <td> {{lis.newMilk}} </td>
+            <td> {{lis.newSuger}} </td>
+  
+            <td> {{lis.NewPrice}} </td>
+            <td> {{lis.Newquantity}} </td>
+  
+            <td> {{lis.NewItemPrice}} </td>
+  
+  
+            
+  
+  
+          
+          </tr>
+        
+        </tbody>
+      </table>
+      <br>
+      <ion-button [routerLink]="['/home/']">Home</ion-button>
+</ion-content>

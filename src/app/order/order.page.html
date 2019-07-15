@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>order</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list >
+
+      <ion-radio-group [(ngModel)] ="suger">
+          <ion-list-header>
+            <ion-label>Suger</ion-label>
+          </ion-list-header>
+      
+          <ion-item>
+            <ion-label>1</ion-label>
+            <ion-radio slot="start" value="1" checked></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>2</ion-label>
+            <ion-radio slot="start" value="2"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>3</ion-label>
+            <ion-radio slot="start" value="3"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+
+    
+    <ion-radio-group [(ngModel)] ="milk" >
+        <ion-list-header>
+          <ion-label>Milk</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>Yes</ion-label>
+          <ion-radio slot="start" value="Yes" checked></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>No</ion-label>
+          <ion-radio slot="start" value="No" checked></ion-radio>
+        </ion-item>
+    
+
+      </ion-radio-group>
+    
+      
+     
+
+      <ion-item *ngIf = "cid">
+          <ion-label position="floating">Coffee Price</ion-label>
+          <ion-input  [(ngModel)] ="coffeeList.price" > </ion-input>
+
+          <ion-label position="floating">Total Price =(Price * Quantuty)</ion-label>
+          <ion-input  [(ngModel)] ="coffeeList.ItemPrice" > </ion-input>
+      
+
+
+      
+          <ion-label position="floating">Quantity </ion-label>
+          <ion-input  [(ngModel)] ="coffeeList.quantity" (change)="countPrice(coffeeList)"> </ion-input>
+
+          <ion-button fill="outline" slot="end" (click)="quantity_dec(coffeeList)">-</ion-button>
+          <ion-button fill="outline" slot="end" (click)="quantity_inc(coffeeList)">+</ion-button>
+
+        </ion-item>
+
+          <ion-button fill="outline"  slot="end" (click)="addOrder(coffeeList.id,coffeeList.coffeName,milk,suger,coffeeList.quantity,coffeeList.price,coffeeList.ItemPrice)">Order Now</ion-button>
+
+
+          <ion-button fill="outline"  slot="end" [routerLink]="['/home/']">Home</ion-button>
+
+
+
+
+          
+  </ion-list>
+
+
+</ion-content>

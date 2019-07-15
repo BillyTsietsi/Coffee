@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>coffeeList</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <br>
+ 
+    <!-- Default Item -->
+    <br>
+    <ion-item *ngFor="let list of ListCoffee">
+      <ion-thumbnail slot="start">
+        <img [src] = list.pic >
+    
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{list.coffeeName}}</h2>
+        <p> R {{list.price}}</p>
+      </ion-label>
+      <ion-button fill="outline" slot="end" [routerLink]="['/order/',list.id]">Order</ion-button>
+    
+    </ion-item>
+</ion-content>
