@@ -68,10 +68,9 @@
 
         </ion-item>
 
-          <ion-button fill="outline"  slot="end" (click)="addOrder(coffeeList.id,coffeeList.coffeName,milk,suger,coffeeList.quantity,coffeeList.price,coffeeList.ItemPrice)">Order Now</ion-button>
+          <ion-button fill="outline"  slot="end" [routerLink]="['/showorder/']" (click)="addOrder(coffeeList.id,coffeeList.coffeName,milk,suger,coffeeList.quantity,coffeeList.price,coffeeList.ItemPrice)">Order Now</ion-button>
 
 
-          <ion-button fill="outline"  slot="end" [routerLink]="['/home/']">Home</ion-button>
 
 
 
