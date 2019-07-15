@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,ParamMap} from '@angular/router';
 import { CoffeeService } from '../coffee.service';
-import { threadId } from 'worker_threads';
 
 @Component({
   selector: 'app-order',
