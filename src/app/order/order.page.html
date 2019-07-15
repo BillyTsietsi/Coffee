@@ -1,11 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>order</ion-title>
+    <ion-title>Order</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list >
+  <ion-list *ngIf = "cid">
+      <ion-input  [(ngModel)] ="coffeeList.coffeName" > </ion-input>
 
       <ion-radio-group [(ngModel)] ="suger">
           <ion-list-header>
@@ -50,7 +51,7 @@
       
      
 
-      <ion-item *ngIf = "cid">
+      <ion-item >
           <ion-label position="floating">Coffee Price</ion-label>
           <ion-input  [(ngModel)] ="coffeeList.price" > </ion-input>
 
